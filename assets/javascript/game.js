@@ -7,11 +7,11 @@ $(document).ready(function () {
     var total = 0;
 
     function setRandomNumber() { 
-        return (Math.floor((Math.random() * 50) + 1));
+        return (Math.floor((Math.random() * 101) + 19));
     }
 
     function setRandomSmallNumber() { 
-        return (Math.floor((Math.random() * 10) + 1))
+        return (Math.floor((Math.random() * 12) + 1))
     }
 
     var pinkcrystal = setRandomSmallNumber();
@@ -75,7 +75,7 @@ $(document).ready(function () {
     })
 });
 
-if (total == compNum) {
+if (total === compNum) {
     winner++;
     alert('You won!')
     console.log('you won!')
@@ -88,10 +88,6 @@ if (total > compNum) {
     reset()
 }
 
-if (total != compNum) {
-    loser++;
-    reset()
-}
 
 
 //First, I need to make sure that when we setRandomNumber it only resets when we win or lose the game 
