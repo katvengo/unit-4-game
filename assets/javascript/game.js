@@ -1,10 +1,13 @@
 $(document).ready(function () {
 
-    var winner = document.getElementsByClassName('winner');
-    var loser = document.getElementsByClassName('loser');
+    var win = document.getElementsByClassName('winner');
+    var loss = document.getElementsByClassName('loser');
     var compNum = document.getElementsByClassName('bigger1');
     var totalScore = document.getElementsByClassName('totalscore');
+
     var total = 0;
+    var winValue = 0;
+    var lossValue = 0;
 
     function setRandomNumber() { 
         return (Math.floor((Math.random() * 101) + 19));
@@ -22,7 +25,8 @@ $(document).ready(function () {
     function reset() {
         compNum = setRandomNumber()
         $(".bigger1").text(compNum)
-        total = 0
+        total = 0;
+        $('.totalscore').textContent = 0;
         pinkcrystal = setRandomSmallNumber();
         diamond = setRandomSmallNumber();
         purplecrystal = setRandomSmallNumber();
@@ -43,6 +47,7 @@ $(document).ready(function () {
         total = total + pinkGemValue;
         console.log(total);
         $(".totalscore").text(total)
+        handleWinOrLose();
     
 
     })
@@ -54,39 +59,45 @@ $(document).ready(function () {
         total = total + diamondGemValue;
         console.log(total);
         $(".totalscore").text(total)
+        handleWinOrLose();
     })
 
-    $('.purpleCrystal').on('click', function () { //Showing NaN
+    $('.purpleCrystal').on('click', function () { 
         console.log('I am the purple crystal!')
         var purpleGemValue = parseInt($(this).val());
         console.log("purpleGemvalue", purpleGemValue)
         total = total + purpleGemValue;
         console.log(total);
         $(".totalscore").text(total)
+        handleWinOrLose();
     })
 
-    $('.redCrystal').on('click', function () { //Showing NaN
+    $('.redCrystal').on('click', function () { 
         console.log('I am the red crystal!')
         var redGemValue = parseInt($(this).val());
         console.log("redGemvalue", redGemValue)
         total = total + redGemValue;
         console.log(total);
         $(".totalscore").text(total)
+        handleWinOrLose();
     })
+    
+    function handleWinOrLose() {
+        if (parseInt(total) === compNum) {
+            win.textContent ++;
+            console.log(win)
+            reset()
+            
+        }
+        if (parseInt(total) > compNum) {
+            loser.textContent ++;
+            console.log(loss)
+            reset()
+        }
+    }
 });
 
-if (total === compNum) {
-    winner++;
-    alert('You won!')
-    console.log('you won!')
-    reset()
-    $(".winner").text(winner)
-}
-if (total > compNum) {
-    loser++;
-    alert('You lost!')
-    reset()
-}
+
 
 
 
