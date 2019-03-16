@@ -9,8 +9,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="assets/javascript/game.js"></script>
+    
 </head>
 
 <body>
@@ -66,8 +65,8 @@
             </div>
             <div class="col-md-2">
                 <div class="bigger2">
-                    <p>Wins</p>
-                    <p>Losses</p>
+                    <p id ="winner">Wins</p>
+                    <p id="loser">Losses</p>
                 </div></div>
             <div class="col-md-8">
                 
@@ -77,23 +76,23 @@
         <div class="row">
             <!-- Third row: Gems go here  -->
             <div class="col-md-1">
-                <button type="button"><img src="assets/images/pink-crystal.png" alt="pink crystal" class="pinkCrystal"
+                <button type="button" class="crystal"><img src="assets/images/pink-crystal.png" alt="pink crystal" class="pinkCrystal"
                         height="100px" width="100px">
                 </button>
             </div>
             <div class="col-md-1">
-                <button type="button">
+                <button type="button" class="crystal">
                     <img src="assets/images/diamond-crystal.png" alt="diamond" class="diamond" height="100px" width="100px">
                 </button>
             </div>
             <div class="col-md-1">
-                <button type="button">
+                <button type="button" class="crystal">
                     <img src="assets/images/purple-crystal.png" alt="purple crystal" class="purpleCrystal" height="100px"
                         width="100px">
                 </button>
             </div>
             <div class="col-md-1">
-                <button type="button">
+                <button type="button" class="crystal">
                     <img src="assets/images/red-crystal.png" alt="red crystal" class="redCrystal" height="100px" width="100px">
                 </button>
             </div>
@@ -132,6 +131,7 @@
             </div>
         </div>
     </div>
-    <script src='assets/javascript/game.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
 </body>
 </html>
