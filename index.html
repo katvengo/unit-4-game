@@ -9,107 +9,126 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous">
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="assets/javascript/game.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
 </head>
 
 <body>
-    <div class="container"> <!-- This will be the main part of the page -->
+    <div class="container">
+        <!-- This will be the main part of the page -->
 
-        <div class="row">    <!-- First row: Crystal Collector Head section -->
-            <div class="col-md-6">
-            <h1> Crystal Collector</h1>   
+        <div class="row">
+            <!-- First row: Crystal Collector Head section -->
+            <div class="col-md-4">
+                <h1> Crystal Collector</h1>
             </div>
             <div class="col-md-2">
-                
+
             </div>
             <div class="col-md-2">
-                
-            </div>
-            <div class="col-md-2">
-                
-            </div>
-        </div>
-        <div class="row"> <!-- Sixth row added on later with the instructions -->
-            <div class="col-md-4 instructions">
-            You will be given a random number at the start of the game.
-            <p>
-             There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score   
-            </p>
-            <p>You win the game by matching your total score to a random number, you lose the game if your total score goes above the random number. 
-            </p>
-            <p>
-            The value of each crystal is hidden from you until you click on it.
-            </p>
-            <p>Each time when the game starts, the game will change the value of each crystal</p>
-            </div>
-            <div class="col-md-2">
-            <!-- Empty DIV -->
-            </div>
-            <div class="col-md-2">
-            <!-- Empty DIV -->
+
             </div>
             <div class="col-md-4">
-            <!-- Empty DIV -->
+
             </div>
         </div>
-        <div class="row">    <!-- Second row  -->
+        <div class="row">
+            <!-- Sixth row added on later with the instructions -->
+            <div class="col-md-4 instructions">
+                You will be given a random number at the start of the game.
+                <p>
+                    There are four crystals below. By clicking on a crystal you will add a specific amount of points to
+                    your total score
+                </p>
+                <p>You win the game by matching your total score to a random number, you lose the game if your total
+                    score goes above the random number.
+                </p>
+                <p>
+                    The value of each crystal is hidden from you until you click on it.
+                </p>
+                <p>Each time when the game starts, the game will change the value of each crystal</p>
+            </div>
+            <div class="col-md-2">
+                <!-- Empty DIV -->
+            </div>
+            <div class="col-md-2">
+                <!-- Empty DIV -->
+            </div>
+            <div class="col-md-4">
+                <!-- Empty DIV -->
+            </div>
+        </div>
+        <div class="row">
+            <!-- Second row  -->
             <div class="col-md-2">
             <div class="bigger1"></div>
+            
             </div>
             <div class="col-md-2">
-            <div class="bigger2">
-           <p>Wins</p>
-           <p>Losses</p>
-            </div>
-            </div>
+                <div class="bigger2">
+                    <p>Wins</p>
+                    <p>Losses</p>
+                </div></div>
             <div class="col-md-8">
                 
             </div>
+            
         </div>
-        <div class="row">  <!-- Third row: Gems go here  -->
+        <div class="row">
+            <!-- Third row: Gems go here  -->
             <div class="col-md-1">
-            <img src="assets/images/pink-crystal.png" alt="pink crystal" class="pinkcrystal" height="100px" width="100px">
+                <button type="button"><img src="assets/images/pink-crystal.png" alt="pink crystal" class="pinkCrystal"
+                        height="100px" width="100px">
+                </button>
             </div>
             <div class="col-md-1">
-            <img src="assets/images/diamond-crystal.png" alt="diamond" class="diamond" height="100px" width="100px">
+                <button type="button">
+                    <img src="assets/images/diamond-crystal.png" alt="diamond" class="diamond" height="100px" width="100px">
+                </button>
             </div>
             <div class="col-md-1">
-            <img src="assets/images/purple-crystal.png" alt="purple crystal" class="purplecrystal" height="100px" width="100px">
+                <button type="button">
+                    <img src="assets/images/purple-crystal.png" alt="purple crystal" class="purpleCrystal" height="100px"
+                        width="100px">
+                </button>
             </div>
             <div class="col-md-1">
-            <img src="assets/images/red-crystal.png" alt="red crystal" class="redcrystal" height="100px" width="100px">
+                <button type="button">
+                    <img src="assets/images/red-crystal.png" alt="red crystal" class="redCrystal" height="100px" width="100px">
+                </button>
             </div>
             <div class="col-md-8">
-            <!-- Empty DIV -->
+                <!-- Empty DIV -->
             </div>
         </div>
-        <div class="row"> <!-- Fourth row  -->
+        <div class="row">
+            <!-- Fourth row  -->
             <div class="col-md-3 scoretext">
-            Your total score is
+                Your total score is
             </div>
             <div class="col-md-3">
-            <!-- Empty DIV -->
+                <!-- Empty DIV -->
             </div>
             <div class="col-md-3">
-            <!-- Empty DIV -->
+                <!-- Empty DIV -->
             </div>
             <div class="col-md-3">
-            <!-- Empty DIV -->
+                <!-- Empty DIV -->
             </div>
         </div>
-        <div class="row"> <!-- Fifth row  -->
-            <div class="col-md-3 totalscore ">
-            Number/Score is here
+        <div class="row">
+            <!-- Fifth row  -->
+            <div class="col-md-3 totalscore">
+                
             </div>
             <div class="col-md-3">
-            <!-- Empty DIV -->
+                <!-- Empty DIV -->
             </div>
             <div class="col-md-3">
-            <!-- Empty DIV -->
+                <!-- Empty DIV -->
             </div>
             <div class="col-md-3">
-            <!-- Empty DIV -->
+                <!-- Empty DIV -->
             </div>
         </div>
     </div>

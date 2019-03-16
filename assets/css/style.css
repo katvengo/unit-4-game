@@ -1,38 +1,38 @@
-body{
-background-image: url("../images/green_dust_scratch.png"); 
+body {
+    background-image: url("../images/green_dust_scratch.png");
 }
 
-h1{
-background-color: orange; 
-color: white;
-width: 300px;
+h1 {
+    background-color: orange;
+    color: white;
+    width: 300px;
 }
-.bigger1{
+
+.bigger1 {
     height: 200px;
-    width: 200px;
+    width: 250px;
     background-color: rgb(121, 151, 207);
-    padding-right: 20px;
 }
 
-.bigger2{
-    padding-left: 20px;
+.bigger2 {
     height: 200px;
-    width: 100px;
+    width: 150px;
     background-color: #daadda;
 }
 
 .instructions {
-color: green;
-background-color: peachpuff;
-width: 400px;
-overflow: scroll;
+    color: green;
+    background-color: peachpuff;
+    width: 400px;
+    overflow: scroll;
 }
 
-.scoretext{
+.scoretext {
     background-color: hsl(202, 67%, 42%);
     height: 50px;
 }
-.totalscore{
-    background-color:hsl(202, 60%, 34%);
+
+.totalscore {
+    background-color: hsl(202, 60%, 34%);
     height: 200px;
 }
