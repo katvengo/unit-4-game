@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
-    var win = document.getElementsByClassName('winner');
-    var loss = document.getElementsByClassName('loser');
+    var win = document.getElementById('winner');
+    var loss = document.getElementById('loser');
     var compNum = document.getElementsByClassName('bigger1');
     var totalScore = document.getElementsByClassName('totalscore');
 
@@ -25,8 +25,8 @@ $(document).ready(function () {
     function reset() {
         compNum = setRandomNumber()
         $(".bigger1").text(compNum)
+        $('.totalscore').textContent = 0; 
         total = 0;
-        $('.totalscore').textContent = 0;
         pinkcrystal = setRandomSmallNumber();
         diamond = setRandomSmallNumber();
         purplecrystal = setRandomSmallNumber();
@@ -36,11 +36,11 @@ $(document).ready(function () {
         $('.purpleCrystal').val(purplecrystal);
         $('.redCrystal').val(redcrystal);
     }
-
-
-    reset()
-
-    $('.pinkCrystal').on('click', function () { //Here we call the function so that when we click we get a random number
+    function clear(){
+        $(".totalscore").empty()
+    }
+ reset()
+    $('.pinkCrystal').on('click', function () { 
         console.log('I am the pink crystal!')
         var pinkGemValue = parseInt($(this).val());
         console.log("pinkgemvalue", pinkGemValue)
@@ -82,27 +82,26 @@ $(document).ready(function () {
         handleWinOrLose();
     })
     
-    function handleWinOrLose() {
+    function handleWinOrLose() {   //Conditions to determine if we win or lose the game
         if (parseInt(total) === compNum) {
-            win.textContent ++;
+            winValue++;
+            $('#winner').text(winValue);
+            // winner.textContent ++;
             console.log(win)
+            alert('You won!')
             reset()
+            clear()
+        
             
         }
         if (parseInt(total) > compNum) {
-            loser.textContent ++;
+            lossValue ++;
+            $('#loser').text(lossValue);
+            // loss.textContent ++;
             console.log(loss)
+            alert('Sorry try again!')
             reset()
+            clear()
         }
     }
 });
-
-
-
-
-
-//First, I need to make sure that when we setRandomNumber it only resets when we win or lose the game 
-//I need to make sure that whenever we start a new game, the random number when we click on the crystal, stays the same
-//We need to be able to push the numbers of the crystals into an empty array
-//Then we need to combine the numbers and match them to the number in bigger1
-//If the numbers match, user wins and we increase our win total! If they do not, then we increase our losses by 1.
